@@ -1,0 +1,9 @@
+<!-- timer.component.html -->
+<div class="timer-container">
+    <h1>{{ timer }}</h1>
+    <button (click)="startTimer()">Start</button>
+    <button *ngIf="!isPaused && timerSubscription" (click)="pauseTimer()">Pause</button>
+    <button *ngIf="isPaused" (click)="resumeTimer()">Resume</button>
+    <button (click)="resetTimer()">Reset</button>
+  </div>
+  
